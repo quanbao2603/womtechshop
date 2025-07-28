@@ -5,7 +5,7 @@ import java.util.Properties;
 import jakarta.mail.*;
 import jakarta.mail.internet.*;
 
-public class Email {
+public class email {
     static final String FROM_EMAIL = "nguyenquanbao2632005@gmail.com";
     static final String PASSWORD = "zxqe eqmf zsud kgwf";
 
@@ -108,7 +108,7 @@ public class Email {
     public static void sendWelcomeEmail(String to, String name) {
         String title = "Chào mừng đến với WOMTechShop!";
         String content = "Cảm ơn bạn đã đăng ký tài khoản. Chúc bạn có trải nghiệm tuyệt vời cùng chúng tôi.";
-        Email emailService = new Email();
+        email emailService = new email();
         String html = emailService.buildEmail(name, title, content);
         sendEmail(to, title, html);
     }
@@ -116,7 +116,7 @@ public class Email {
     public static void sendResetPasswordEmail(String to, String name, String resetLink) {
         String title = "Yêu cầu đặt lại mật khẩu";
         String content = "Click vào liên kết bên dưới để đặt lại mật khẩu:<br><a href='" + resetLink + "'>Đặt lại mật khẩu</a>";
-        Email emailService = new Email();
+        email emailService = new email();
         String html = emailService.buildEmail(name, title, content);
         sendEmail(to, title, html);
     }
@@ -130,7 +130,7 @@ public class Email {
                 - Tổng: %s<br><br>
                 Chúng tôi sẽ xử lý trong thời gian sớm nhất.
                 """.formatted(orderId, orderDate, total);
-        Email emailService = new Email();
+        email emailService = new email();
         String html = emailService.buildEmail(name, title, content);
         sendEmail(to, title, html);
     }
@@ -141,7 +141,7 @@ public class Email {
                 Nhập mã <strong>%s</strong> để được giảm giá đặc biệt!<br>
                 Có hiệu lực đến hết: <strong>%s</strong>
                 """.formatted(promoCode, validUntil);
-        Email emailService = new Email();
+        email emailService = new email();
         String html = emailService.buildEmail(name, title, content);
         sendEmail(to, title, html);
     }

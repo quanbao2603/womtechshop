@@ -27,8 +27,8 @@
 			<% } %>
 
 			<div class="form-floating mb-3">
-				<input type="text" class="form-control" id="name" name="name"
-					placeholder="Họ và tên" required> <label for="name">Họ
+				<input type="text" class="form-control" id="fullname" name="fullname"
+					placeholder="Họ và tên" required> <label for="fullname">Họ
 					và tên</label>
 			</div>
 
@@ -39,21 +39,21 @@
 			</div>
 
 			<div class="form-floating mb-3">
-				<input type="email" class="form-control" id="email" name="email"
-					placeholder="Email" required> <label for="email">Email</label>
-			</div>
-
-			<div class="form-floating mb-3">
 				<input type="password" class="form-control" id="password"
 					name="password" placeholder="Mật khẩu" required autocomplete="off">
 				<label for="password">Mật khẩu</label>
 			</div>
 
 			<div class="form-floating mb-4">
-				<input type="password" class="form-control" id="re-password"
-					name="re-password" placeholder="Nhập lại mật khẩu" required
-					autocomplete="off"> <label for="re-password">Nhập
+				<input type="password" class="form-control" id="re_password"
+					name="re_password" placeholder="Nhập lại mật khẩu" required
+					autocomplete="off"> <label for="re_password">Nhập
 					lại mật khẩu</label>
+			</div>
+			
+			<div class="form-floating mb-3">
+				<input type="email" class="form-control" id="email" name="email"
+					placeholder="Email" required> <label for="email">Email</label>
 			</div>
 
 			<button class="w-100 btn btn-lg btn-primary mb-3" type="submit">Đăng
@@ -67,9 +67,6 @@
 	<script
 		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
-		integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
-		crossorigin="anonymous">
-</script>
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

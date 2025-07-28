@@ -18,7 +18,7 @@
 	<div class="container mt-5 contact-content">
         <h2 class="mb-4">LIÊN HỆ</h2>
         <p><strong>CÔNG TY TNHH CÔNG NGHỆ VÀ DỊCH VỤ TECHWORLD</strong></p>
-        <p>GPĐK & MST: 0300123456 - Nơi cấp: Sở KH&ĐT TP.HCM</p>
+        <p>GPĐK &amp; MST: 0300123456 - Nơi cấp: Sở KH&amp;ĐT TP.HCM</p>
 
         <p><strong>Văn phòng chính:</strong> 123/45 Nguyễn Văn Cừ, P.1, Q.5, TP.HCM</p>
         <ul>
@@ -30,25 +30,23 @@
 
         <p><strong>Call Center:</strong> 1900 1234</p>
         <ul>
-            <li><strong>Line 1:</strong> Tư vấn & Bán hàng</li>
-            <li><strong>Line 2:</strong> Phòng kinh doanh & doanh nghiệp</li>
+            <li><strong>Line 1:</strong> Tư vấn &amp; Bán hàng</li>
+            <li><strong>Line 2:</strong> Phòng kinh doanh &amp; doanh nghiệp</li>
             <li><strong>Line 3:</strong> Hỗ trợ kỹ thuật</li>
             <li><strong>Line 0:</strong> Phản ánh dịch vụ hoặc Email: <a href="mailto:hotro@techworld.vn">hotro@techworld.vn</a></li>
             <li><strong>Hotline sản phẩm:</strong> 0909 888 123</li>
         </ul>
 
         <p><strong>Thời gian hoạt động:</strong> Thứ 2 - Thứ 7: 08:00 - 21:00 <br>
-        Chủ Nhật & Ngày Lễ: 08:30 - 17:30</p>
+        Chủ Nhật &amp; Ngày Lễ: 08:30 - 17:30</p>
         <p><em>(Miễn phí giữ xe trong giờ làm việc)</em></p>
 	</div>
 	
 	<jsp:include page="/include/footer.jsp" />
 
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
-		integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
-		crossorigin="anonymous">
-	</script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
