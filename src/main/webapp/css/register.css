@@ -1,7 +1,9 @@
 @charset "UTF-8";
-html,
-body {
+
+html, body {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -10,18 +12,36 @@ body {
   justify-content: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #f5f5f5;
+  background: #fff;
 }
 
+/* 🔒 Form đăng ký hiện đại */
 .form-register {
-  max-width: 400px;
-  padding: 15px;
+  width: 100%;
+  max-width: 420px;
+  padding: 30px 35px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px);
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
-.form-register .form-floating:focus-within {
-  z-index: 2;
+/* Input đẹp, rõ ràng */
+.form-control {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #333;
 }
 
+.form-control::placeholder {
+  color: #555;
+}
+
+label {
+  color: #222;
+}
+
+/* Xử lý input border radius đúng */
 .form-register input[type="email"] {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
@@ -34,8 +54,18 @@ body {
   border-top-right-radius: 0;
 }
 
+/* Link trong form */
 .form-register form a {
   text-decoration: none;
+  color: #0d6efd;
+}
+.form-register form a:hover {
+  text-decoration: underline;
+}
+
+/* Giữ phần Bootstrap khác */
+.form-register .form-floating:focus-within {
+  z-index: 2;
 }
 
 .bd-placeholder-img {

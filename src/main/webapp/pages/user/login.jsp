@@ -41,7 +41,7 @@
 			<button class="w-100 btn btn-lg btn-primary mb-3" type="submit">Đăng
 				nhập</button>
 			<a href="register.jsp">Đăng ký tài khoản mới</a>
-			<p class="mt-5 mb-3 text-muted">&copy;2025 WomTechShop. All
+			<p class="mt-5 mb-3">&copy;2025 WomTechShop. All
 				rights reserved.</p>
 		</form>
 	</main>
