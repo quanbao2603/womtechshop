@@ -18,9 +18,9 @@ body {
 /* 🔒 Form đăng ký hiện đại */
 .form-register {
   width: 100%;
-  max-width: 420px;
+  max-width: 680px;
   padding: 30px 35px;
-  background: rgba(255, 255, 255, 0.15);
+  background: linear-gradient(135deg, rgba(33, 150, 243, 0.35), rgba(255, 255, 255, 0.25));
   backdrop-filter: blur(16px);
   border-radius: 15px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
@@ -28,13 +28,29 @@ body {
 
 /* Input đẹp, rõ ràng */
 .form-control {
-  background: rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* chỉ border dưới */
   color: #333;
+  padding: 8px 0;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+  backdrop-filter: none; /* nếu bạn không cần hiệu ứng kính */
+  transition: all 0.3s ease;
 }
 
 .form-control::placeholder {
   color: #555;
+}
+
+.form-control:focus {
+  background: transparent !important;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8); /* tuỳ màu nền */
+  box-shadow: none !important;
+  outline: none !important;
+  color: #333;
 }
 
 label {
@@ -60,7 +76,7 @@ label {
   color: #0d6efd;
 }
 .form-register form a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* Giữ phần Bootstrap khác */

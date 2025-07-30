@@ -16,7 +16,7 @@
 </head>
 <body>
 	<main class="form-login w-100 m-auto">
-		<form class="text-center" action="<%=url%>/login-servlet" method="POST">
+		<form class="text-center" action="<%=url%>/login-servlet" method="POST" autocomplete="off">
 			<img class="mb-4"
 				src="<%= request.getContextPath() %>/asset/img/logo/logo.png"
 				alt="" width="72">
