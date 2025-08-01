@@ -64,10 +64,11 @@ public class RegisterServlet extends HttpServlet {
 		if (error == null) {
 			String userId = UUID.randomUUID().toString();
 			Role role = new Role("001", "customer", "Khách hàng");
-			Date createdAt = Date.valueOf(LocalDate.now());
+			Date create_at = Date.valueOf(LocalDate.now());
+			Date update_at = Date.valueOf(LocalDate.now());
 			String hashedPassword = Encryption.hashPassword(password);
 			boolean status = true;
-			Users user = new Users(userId, role, username, hashedPassword, email, createdAt, status);
+			Users user = new Users(userId, role, username, hashedPassword, email, create_at, update_at, status);
 			HttpSession session = request.getSession();
 			session.setAttribute("pendingUser", user);
 			response.sendRedirect("verify-otp-servlet");

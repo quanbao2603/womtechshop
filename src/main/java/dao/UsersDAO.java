@@ -28,10 +28,11 @@ public class UsersDAO implements DAOInterface<Users> {
 				String password = rs.getString(4);
 				String email = rs.getString(5);
 				Date create_at = rs.getDate(6);
-				Boolean status = rs.getBoolean(7);
+				Date update_at = rs.getDate(7);
+				Boolean status = rs.getBoolean(8);
 				Role role = new Role();
 				role.setRoleID(roleID);
-				Users users = new Users(usersID, role, username, password, email, create_at, status);
+				Users users = new Users(usersID, role, username, password, email, create_at, update_at, status);
 				result.add(users);
 			}
 			con.close();
@@ -57,12 +58,13 @@ public class UsersDAO implements DAOInterface<Users> {
 				String password = rs.getString(4);
 				String email = rs.getString(5);
 				Date create_at = rs.getDate(6);
-				Boolean status = rs.getBoolean(7);
+				Date update_at = rs.getDate(7);
+				Boolean status = rs.getBoolean(8);
 
 				Role role = new Role();
 				role.setRoleID(roleID);
 
-				users = new Users(usersID, role, username, password, email, create_at, status);
+				users = new Users(usersID, role, username, password, email, create_at, update_at, status);
 			}
 			con.close();
 		} catch (SQLException e) {
@@ -76,8 +78,8 @@ public class UsersDAO implements DAOInterface<Users> {
 		int result = 0;
 		try {
 			Connection con = JDBCUtil.getConnection();
-			String sql = "INSERT INTO users (usersID, roleID, username, password, email, create_at, status) "
-					+ "VALUES (?, ?, ?, ?, ?, ?, ?)";
+			String sql = "INSERT INTO users (usersID, roleID, username, password, email, create_at, update_at, status) "
+					+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, t.getUsersID());
 			st.setString(2, t.getRole().getRoleID());
@@ -85,7 +87,8 @@ public class UsersDAO implements DAOInterface<Users> {
 			st.setString(4, t.getPassword());
 			st.setString(5, t.getEmail());
 			st.setDate(6, t.getCreate_at());
-			st.setBoolean(7, t.isStatus());
+			st.setDate(7, t.getUpdate_at());
+			st.setBoolean(8, t.isStatus());
 			result = st.executeUpdate();
 			System.out.println("Bạn đã thực thi: " + sql);
 			System.out.println("Have " + result + " changed");
@@ -101,8 +104,8 @@ public class UsersDAO implements DAOInterface<Users> {
 		int totalInserted = 0;
 		try {
 			Connection con = JDBCUtil.getConnection();
-			String sql = "INSERT INTO users (usersID, roleID, username, password, email, create_at, status) "
-					+ "VALUES (?, ?, ?, ?, ?, ?, ?)";
+			String sql = "INSERT INTO users (usersID, roleID, username, password, email, create_at, update_at, status) "
+					+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 			PreparedStatement st = con.prepareStatement(sql);
 
 			for (Users t : arr) {
@@ -112,7 +115,8 @@ public class UsersDAO implements DAOInterface<Users> {
 				st.setString(4, t.getPassword());
 				st.setString(5, t.getEmail());
 				st.setDate(6, t.getCreate_at());
-				st.setBoolean(7, t.isStatus());
+				st.setDate(7, t.getUpdate_at());
+				st.setBoolean(8, t.isStatus());
 
 				totalInserted += st.executeUpdate();
 			}
@@ -157,7 +161,7 @@ public class UsersDAO implements DAOInterface<Users> {
 		int result = 0;
 		try {
 			Connection con = JDBCUtil.getConnection();
-			String sql = "UPDATE users SET roleID=?, username=?, password=?, email=?, create_at=?, status=? "
+			String sql = "UPDATE users SET roleID=?, username=?, password=?, email=?, create_at=?, update_at=?, status=? "
 					+ "WHERE usersID=?";
 			PreparedStatement st = con.prepareStatement(sql);
 			st.setString(1, t.getRole().getRoleID());
@@ -165,8 +169,9 @@ public class UsersDAO implements DAOInterface<Users> {
 			st.setString(3, t.getPassword());
 			st.setString(4, t.getEmail());
 			st.setDate(5, t.getCreate_at());
-			st.setBoolean(6, t.isStatus());
-			st.setString(7, t.getUsersID());
+			st.setDate(6, t.getUpdate_at());
+			st.setBoolean(7, t.isStatus());
+			st.setString(8, t.getUsersID());
 			System.out.println(sql);
 			result = st.executeUpdate();
 			System.out.println("Bạn đã thực thi: " + sql);

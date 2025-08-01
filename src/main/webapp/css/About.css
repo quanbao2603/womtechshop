@@ -13,7 +13,8 @@
 	color: #0d6efd;
 }
 
-.about-content h4, .about-content h5 {
+.about-content h4,
+.about-content h5 {
 	margin-top: 30px;
 	font-weight: bold;
 	color: #343a40;

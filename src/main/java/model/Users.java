@@ -9,6 +9,7 @@ public class Users {
 	private String password;
 	private String email;
 	private Date create_at;
+	private Date update_at;
 	private boolean status;
 
 	public Users() {
@@ -16,7 +17,7 @@ public class Users {
 	}
 
 	public Users(String usersID, Role role, String username, String password, String email, Date create_at,
-			boolean status) {
+			Date update_at, boolean status) {
 		super();
 		this.usersID = usersID;
 		this.role = role;
@@ -24,6 +25,7 @@ public class Users {
 		this.password = password;
 		this.email = email;
 		this.create_at = create_at;
+		this.update_at = update_at;
 		this.status = status;
 	}
 
@@ -73,6 +75,14 @@ public class Users {
 
 	public void setCreate_at(Date create_at) {
 		this.create_at = create_at;
+	}
+
+	public Date getUpdate_at() {
+		return update_at;
+	}
+
+	public void setUpdate_at(Date update_at) {
+		this.update_at = update_at;
 	}
 
 	public boolean isStatus() {
