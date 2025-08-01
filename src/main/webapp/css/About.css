@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.about-content {
+	padding: 40px 20px;
+	background-color: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+	line-height: 1.7;
+	color: #333;
+}
+
+.about-content h2 {
+	color: #0d6efd;
+}
+
+.about-content h4, .about-content h5 {
+	margin-top: 30px;
+	font-weight: bold;
+	color: #343a40;
+}
+
+.about-content ul {
+	padding-left: 20px;
+	margin-top: 10px;
+}
+
+.about-content ul li {
+	margin-bottom: 8px;
+}
+
+.about-content p {
+	margin-bottom: 12px;
+}

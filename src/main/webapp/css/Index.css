@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+body {
+    background-color: #f8f9fa;
+}
+
+.logo img {
+    width: 120px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.search-bar input {
+    border-radius: 20px;
+    padding: 8px 20px;
+}
+
+.header-icons a {
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.header-icons a:hover {
+    color: #0d6efd;
+}
+
+.navbar {
+    font-weight: 500;
+}
+
+.navbar .nav-link {
+    transition: color 0.3s;
+}
+
+.sidebar {
+    background-color: #ffffff;
+    padding: 20px;
+    border-right: 1px solid #dee2e6;
+    height: 100%;
+}
+
+.sidebar h5 {
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #0d6efd;
+}
+
+.card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.card .btn {
+    border-radius: 20px;
+    padding: 6px 20px;
+}
+
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 12px 0;
+    text-align: center;
+}
