@@ -10,9 +10,11 @@ body {
 	object-fit: contain;
 }
 
-.search-bar input {
+.search-bar input[type=text] {
 	border-radius: 20px;
 	padding: 8px 20px;
+	border: none;
+	background: #fff !important;
 }
 
 .header-icons a {
