@@ -63,7 +63,7 @@ public class RegisterServlet extends HttpServlet {
 		}
 		if (error == null) {
 			String userId = UUID.randomUUID().toString();
-			Role role = new Role("001", "customer", "Khách hàng");
+			Role role = new Role("CUS105", "Customer", "Người dùng mua hàng");
 			Date create_at = Date.valueOf(LocalDate.now());
 			Date update_at = Date.valueOf(LocalDate.now());
 			String hashedPassword = Encryption.hashPassword(password);

@@ -94,6 +94,7 @@ public class UsersDAO implements DAOInterface<Users> {
 			System.out.println("Have " + result + " changed");
 			JDBCUtil.closeConnection(con);
 		} catch (SQLException e) {
+			System.err.println("[ERROR] Lỗi khi insert user: " + e.getMessage());
 			e.printStackTrace();
 		}
 		return result;

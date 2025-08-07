@@ -83,10 +83,10 @@ public class VerifyOtpServlet extends HttpServlet {
 			request.getRequestDispatcher("/page/verify/OTP.jsp").forward(request, response);
 			return;
 		}
-
+		
 		// Lưu user vào DB
 		new UsersDAO().insert(user);
-
+		
 		// Xóa session
 		session.removeAttribute("pendingUser");
 		session.removeAttribute("otp");

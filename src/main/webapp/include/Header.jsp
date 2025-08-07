@@ -18,7 +18,7 @@
 				placeholder="Tìm kiếm sản phẩm...">
 		</div>
 		<div class="header-icons d-flex align-items-center">
-			<a href="#" class="text-dark me-3" data-bs-toggle="modal" data-bs-target="#loginModal"">
+			<a href="#" class="text-dark me-3" data-bs-toggle="modal" data-bs-target="#loginModal">
 				<i class="fas fa-user"></i> Đăng nhập
 			</a> <a href="#" class="text-dark"> 
 				<i class="fas fa-shopping-cart"></i> Giỏ hàng
@@ -33,7 +33,7 @@
 		<ul class="navbar-nav me-auto w-100 justify-content-between">
 			<li class="nav-item"><a
 				class="nav-link <%= currentPage.endsWith("/Index.jsp") ? "active" : "" %>"
-				href="<%= ctx %>/index.jsp">Trang chủ</a></li>
+				href="<%= ctx %>/Index.jsp">Trang chủ</a></li>
 			<li class="nav-item"><a class="nav-link" href="#">Laptop</a></li>
 			<li class="nav-item"><a class="nav-link" href="#">Linh kiện</a>
 			</li>

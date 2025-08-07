@@ -16,7 +16,7 @@ String error = (String) request.getAttribute("error");
 	<div class="otp-container">
 		<h2>Nhập mã OTP</h2>
 		<p>Mã xác thực đã được gửi đến email/số điện thoại của bạn</p>
-		<form id="otp-form" action="<%=url%>/Index.jsp" method="post">
+		<form id="otp-form" action="<%=url%>/verify-otp-servlet" method="POST">
 			<div class="otp-inputs">
 				<input type="text" name="otp1" maxlength="1" required> <input
 					type="text" name="otp2" maxlength="1" required> <input
@@ -32,4 +32,19 @@ String error = (String) request.getAttribute("error");
 		</p>
 	</div>
 </body>
+<script>
+        const form = document.getElementById("otp-form");
+        form.addEventListener("submit", function (e) {
+            const inputs = document.querySelectorAll(".otp-inputs input");
+            let otp = "";
+            inputs.forEach(input => otp += input.value);
+
+            // Tạo input ẩn tên 'otp'
+            const hidden = document.createElement("input");
+            hidden.type = "hidden";
+            hidden.name = "otp";
+            hidden.value = otp;
+            form.appendChild(hidden);
+        });
+    </script>
 </html>
