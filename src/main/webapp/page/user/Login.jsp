@@ -7,7 +7,7 @@
 
 <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <form class="modal-content form-login text-center p-4" action="<%=url%>/LoginServlet" method="POST" autocomplete="off">
+    <form class="modal-content form-login text-center p-4" action="<%=url%>/login-servlet" method="POST" autocomplete="off">
       
       <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
 

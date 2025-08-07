@@ -6,6 +6,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
 
 import dao.UsersDAO;
@@ -34,7 +35,7 @@ public class LoginServlet extends HttpServlet {
 		String error = "";
 
 		UsersDAO usersDAO = new UsersDAO();
-
+		
 		if (!usersDAO.isUsernameExists(username)) {
 			error = "Sai tên đăng nhập hoặc mật khẩu";
 			request.setAttribute("error", error);
@@ -42,6 +43,7 @@ public class LoginServlet extends HttpServlet {
 			rd.forward(request, response);
 		} else {
 			if (usersDAO.isLoginValid(username, password)) {
+				
 				response.sendRedirect(request.getContextPath() + "/Index.jsp");
 			} else {
 				error = "Sai tên đăng nhập hoặc mật khẩu";

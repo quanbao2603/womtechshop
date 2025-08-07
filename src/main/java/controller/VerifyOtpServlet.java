@@ -87,8 +87,11 @@ public class VerifyOtpServlet extends HttpServlet {
 		// Lưu user vào DB
 		new UsersDAO().insert(user);
 		
-		// Xóa session
+		// Chuyển sang user đã xác thực
 		session.removeAttribute("pendingUser");
+		session.setAttribute("user", user); // Giữ lại để người dùng vẫn đăng nhập
+
+		// Xóa OTP
 		session.removeAttribute("otp");
 		session.removeAttribute("otpTimestamp");
 
